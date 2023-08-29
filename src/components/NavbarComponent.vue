@@ -36,7 +36,7 @@
                 <a href="/produk"
                   class="text-grey-600 hover:text-red-600 rounded-md px-3 py-2 text-sm font-medium">Product</a>
                 <a href="/category"
-                  class="text-grey-600 hover:text-red-600 rounded-md px-3 py-2 text-sm font-medium">Category</a>
+                  class="text-grey-600 hover:text-red-600 rounded-md px-3 py-2 text-sm font-medium">Categori</a>
                 <a href="/profil"
                   class="text-grey-600 hover:text-red-600 rounded-md px-3 py-2 text-sm font-medium">Profil</a>
               </div>
@@ -87,7 +87,7 @@
           <a href="/produk"
             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 md:hover:text-red-600 hover:text-red-600 md:dark:hover:bg-transparent text-base font-medium">Product</a>
           <a href="/category"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 md:hover:text-red-600 hover:text-red-600 md:dark:hover:bg-transparent text-base font-medium">Category</a>
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 md:hover:text-red-600 hover:text-red-600 md:dark:hover:bg-transparent text-base font-medium">Categori</a>
           <a href="/profil"
             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 md:hover:text-red-600 hover:text-red-600 md:dark:hover:bg-transparent text-base font-medium">Profil</a>
 

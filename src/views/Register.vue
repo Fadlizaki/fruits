@@ -3,20 +3,20 @@
         <div class="sm:mx-auto sm:w-full sm:max-w-md">
             <img class="mx-auto h-10 w-auto" src="https://www.svgrepo.com/show/301692/login.svg" alt="Workflow">
             <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
-                Create a new account
+                Membuat akun baru
             </h2>
             <p class="mt-2 text-center text-sm leading-5 text-gray-500 max-w">
                 Or
                 <a href="#"
                     class="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:underline transition ease-in-out duration-150">
-                    login to your account
+                    Atau login ke akun Anda
                 </a>
             </p>
         </div>
 
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
             <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                <h3 class="text-2xl font-bold text-center">Register</h3>
+                <h3 class="text-2xl font-bold text-center">Daftar</h3>
                 <form action="" @submit.prevent="performRegister">
                     <div class="mt-4">
                         <div>

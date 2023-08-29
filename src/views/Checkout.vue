@@ -1,55 +1,38 @@
 <template>
-  <div class="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">
-    <a href="#" class="text-2xl font-bold text-gray-800">sneekpeeks</a>
-    <div class="mt-4 py-2 text-xs sm:mt-0 sm:ml-auto sm:text-base">
-      <div class="relative">
-        <ul class="relative flex w-full items-center justify-between space-x-2 sm:space-x-4">
-          <li class="flex items-center space-x-3 text-left sm:space-x-4">
-            <a class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-200 text-xs font-semibold text-emerald-700"
-              href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg></a>
-            <span class="font-semibold text-gray-900">Shop</span>
-          </li>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-          <li class="flex items-center space-x-3 text-left sm:space-x-4">
-            <a class="flex h-6 w-6 items-center justify-center rounded-full bg-gray-600 text-xs font-semibold text-white ring ring-gray-600 ring-offset-2"
-              href="#">2</a>
-            <span class="font-semibold text-gray-900">Shipping</span>
-          </li>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-          <li class="flex items-center space-x-3 text-left sm:space-x-4">
-            <a class="flex h-6 w-6 items-center justify-center rounded-full bg-gray-400 text-xs font-semibold text-white"
-              href="#">3</a>
-            <span class="font-semibold text-gray-500">Payment</span>
-          </li>
-        </ul>
-      </div>
+  <br>
+  <br>
+  <center>
+   
+    <body class="flex items-center justify-center w-screen min-h-screen bg-gray-100 text-gray-800 p-8">
+      
+
+<!-- Component Start -->
+<div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 w-full max-w-screen-lg">
+  <div class="lg:col-span-2">
+    <h1>Order Summary</h1>
+    <div class="bg-white rounded mt-4 shadow-lg">
+      
+      <div class="flex justify-between mb-4" v-for="product in getKeranjang" :key="product.cart_id">
+            <div class="flex items-center">
+              <img
+                src="https://img.freepik.com/free-photo/many-different-berries-form-frame-white-background_485709-54.jpg?w=740&t=st=1693133987~exp=1693134587~hmac=313685f705004dbf64406d4b25540b8ee037e873b4ea3f345a13e732c1731bae"
+                alt="" class="h-20 w-20" />
+                <div>
+                    <h2 class="font-bold">{{ product.name }}</h2>
+                    <p class="text-gray-700">{{ product.qty }} pcs</p>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <span class="font-bold">Rp.{{ product.regular_price * product.qty }}</span>
+            </div>
+        </div>
     </div>
   </div>
-  <div class="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
-    <div class="px-4 pt-8">
-      <p class="text-xl font-medium">Order Summary</p>
-      <p class="text-gray-400">Check your items. And select a suitable shipping method.</p>
-      <div class="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
-        <div v-for="product in getKeranjang" :key="product.cart_id" class="flex flex-col rounded-lg bg-white sm:flex-row">
-          
-          <div class="flex w-full flex-col px-4 py-4">
-            <span class="font-semibold">{{ product.name }}</span>
-            <span class="float-right text-gray-400">{{ product.qty }} pcs</span>
-            <p class="text-lg font-bold">Rp.{{ product.regular_price * product.qty }}</p>
-          </div>
-        </div>
-      </div>
+  <div>
 
-      <p class="mt-8 text-lg font-medium">Delivery Option</p>
+    <div class="bg-white rounded mt-4 shadow-lg py-6">
+      <p class="mt-8 text-lg font-medium">Shipping Methods</p>
+      <div class="px-8">
       <form class="mt-5 grid gap-6">
         <div class="relative">
           <input class="peer hidden" id="radio_1" type="radio" value="standard" v-model="deliveryType" />
@@ -80,7 +63,6 @@
           </label>
         </div>
       </form>
-
       <p class="mt-8 text-lg font-medium">Shipping Methods</p>
       <form class="mt-5 grid gap-6">
         <div class="relative">
@@ -99,6 +81,7 @@
             </div>
           </label>
         </div>
+        
         <div class="relative">
           <input class="peer hidden" id="radio_4" type="radio" value="Payment Wallet" v-model="paymentType" />
           <span
@@ -116,33 +99,23 @@
           </label>
         </div>
       </form>
-    </div>
-
-    <div class="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
-     
-       
-        <!-- Total -->
-        <div class="mt-6 border-t border-b py-2">
-          <div class="flex items-center justify-between">
-            <p class="text-sm font-medium text-gray-900">Subtotal</p>
-            <p class="font-semibold text-gray-900">$399.00</p>
-          </div>
-          <div class="flex items-center justify-between">
-            <p class="text-sm font-medium text-gray-900">Shipping</p>
-            <p class="font-semibold text-gray-900">$8.00</p>
-          </div>
+      </div>
+      <div class="px-8 mt-4 border-t pt-4">
+        <div class="flex items-end justify-between">
+          <span class="font-semibold">Total</span>
+          <span class="font-semibold">Rp.{{ totalHarga() }}</span>
         </div>
-        <div class="mt-6 flex items-center justify-between">
-          <p class="text-sm font-medium text-gray-900">Total</p>
-          <p class="text-2xl font-semibold text-gray-900">Rp.{{ totalHarga() }}</p>
-        </div>
-      
-      <!-- <router-link to="/order"> -->
-      <button @click="performCheckout"
-        class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">Place Order</button>
-      <!-- </router-link>   -->
+      </div>
+      <div class="flex flex-col px-8 pt-4">
+        <button @click="performCheckout" class="flex items-center justify-center bg-blue-600 text-sm font-medium w-full h-10 rounded text-blue-50 hover:bg-blue-700">Place Order</button>
+      </div>
     </div>
   </div>
+</div>
+<!-- Component End  -->
+
+</body>
+  </center>
 </template>
 
 <script>
