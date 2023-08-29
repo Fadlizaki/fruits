@@ -5,15 +5,11 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row -mx-4">
         <div class="md:flex-1 px-4">
-          <div class="h-[460px] rounded-lg bg-gray-300 mb-4">
+          <div class="h-[460px] rounded-lg  mb-4">
             <img
               src="https://img.freepik.com/free-photo/many-different-berries-form-frame-white-background_485709-54.jpg?w=740&t=st=1693133987~exp=1693134587~hmac=313685f705004dbf64406d4b25540b8ee037e873b4ea3f345a13e732c1731bae" />
           </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
         <div class="md:flex-1 px-4">
           <h2 class="text-2xl font-bold mb-2">{{ products.name }}</h2>
           <p class="text-gray-600 text-sm mb-4">Kiwi adalah buah kecil yang berbentuk sawo.</p>
